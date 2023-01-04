@@ -1,0 +1,102 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+body{
+     height: 100vh;
+     background: #f3eae3;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+main{
+     width: 40rem;
+     min-height: 60vh;
+     display: flex;
+     border-radius: 20px;
+     overflow: hidden;
+}
+.image {
+     background-image: url('./images/image-product-desktop.jpg');
+     width: 20rem;
+     min-height: 100%;
+     background-size: cover;
+}
+
+.content{
+     width: 20rem;
+     padding: 2rem;
+     min-height: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+     background: #fff;
+}
+.content h1{
+     font-family: 'Fraunces', serif;
+}
+.content p{
+     color: #8e9098;
+     font-family: 'Montserrat', sans-serif;
+}
+.content p:nth-child(1){
+     text-transform: uppercase;
+     letter-spacing: 0.5rem;
+}
+.price{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.price span{
+     color: #3d8168;
+     font-size: 2rem;
+     font-family: 'Fraunces', serif;
+}
+.price strike{
+     color: #8e9098;
+     font-family: 'Montserrat', sans-serif;
+}
+button{
+     background: #3d8168;
+     padding: 1rem;
+     border-radius: 10px;
+     border: none;
+     text-transform: capitalize;
+     font-weight: bold;
+     color: #fff;
+     display: flex;
+     gap: 0.5rem;
+     justify-content: center;
+}
+
+@media screen and (max-width:786px) {
+     body{
+          padding: 1rem;
+     }
+     main{
+          flex-direction: column;
+     }
+     .image {
+          height: 20rem;
+          width: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url('./images/image-product-mobile.jpg');
+     }
+     .content{
+          width: 100%;
+          height: 100%;
+     }
+     
+}
+@media screen and (max-width:425px) {
+     .content{
+          gap: 1rem;
+     }
+     .image {
+          height: 15rem;
+     }
+     
+}
